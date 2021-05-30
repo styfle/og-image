@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2 {
+  font-weight: 700;
+  @apply text-strongest;
+}
+
+th,
+td {
+  padding: 0.5rem 1rem;
+}
+
+p {
+  margin: 1rem;
+}
+
+a {
+  @apply text-azure;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  @apply shadow;
+  @apply transition;
+}
+img:hover {
+  @apply shadow-lg;
+}
+
+section {
+  margin: 5rem;
+}
+
+select,
+input {
+  padding: 0.375rem 0.75rem;
+  @apply border;
+  border-radius: 0.25rem;
+  @apply transition;
+}
+select:hover,
+input:hover {
+  @apply border-strong;
+}
+
+input {
+  width: 100%;
+}
+
+select {
+  --icon-size: 0.75rem;
+  appearance: none;
+  cursor: pointer;
+  background-image: url('/icons/select.svg');
+  background-position: right var(--icon-size) center;
+  background-repeat: no-repeat;
+  background-size: var(--icon-size) var(--icon-size);
+  padding-right: calc(var(--icon-size) * 3);
+  text-align: center;
+  @apply text-strong;
+}
+select:hover {
+  @apply text-stronger;
+}
+
+code {
+  @apply text-crimson;
+}
+code::before,
+code::after {
+  content: '`';
+}
